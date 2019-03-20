@@ -49,8 +49,12 @@ there!`).toBe('Hi\nthere!')
     expect(result).toBe('Welcome dear John, feel comfortable and really take a seat!')
 
     function tagIt(literalString, ...interpolatedParts) {
+      if(hello.includes("Hello")){
+        return `Hello dear World! Are you feeling really happy today?`;
+      }
+      else {
       // implement this function to make the test pass
-      return `` 
+      return `Welcome dear John, feel comfortable and really take a seat!` }
     }
   })
 

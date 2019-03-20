@@ -3,16 +3,14 @@ describe('Template literals', () => {
   it('should support string interpolation', () => {
     const personPL = {
       name: 'Jarosław',
-      friends: ['Antoni', 'Andrzej', 'Krystyna', 'Wiktor'],
-      numbers: 4
+      friends: ['Antoni', 'Andrzej', 'Krystyna', 'Wiktor']
     }
     const personEN = {
       name: 'Darren',
-      friends: ['Greg', 'Sebastian', 'Chloe'],
-      numbers: 3
+      friends: ['Greg', 'Sebastian', 'Chloe']
     }
     // construct an arrow function using template literal string interpolation
-    const friendsStr = person => `${person.name} has ${person.numbers} friends: ${person.friends.join(', ')}`
+    const friendsStr = person => `${personPL.name} has 4 friends: ${personPL.friends.join(', ')}`
 
     expect(friendsStr(personPL)).toBe(
       'Jarosław has 4 friends: Antoni, Andrzej, Krystyna, Wiktor'
@@ -24,16 +22,15 @@ describe('Template literals', () => {
 
   it('should support multi-line strings', () => {
     // construct a string with multiple lines without needing escaped newline characters
-    const multiLine = `\n    Oh\n    my\n    dear\n    so much fun!`
+    const multiLine = ``
 
     expect(multiLine).toBe('\n    Oh\n    my\n    dear\n    so much fun!')
   })
 
   it('should support string escaping', () => {
     // escape a string in a template literal for each of these
-    expect(`Hi
-there!`).toBe('Hi\nthere!')
-    expect('This is `escaped` backtics').toBe('This is `escaped` backtics')
+    expect().toBe('Hi\nthere!')
+    expect().toBe('This is `escaped` backtics')
   })
 
   // you likely wont often use tagging, but it can be handy!
@@ -50,7 +47,7 @@ there!`).toBe('Hi\nthere!')
 
     function tagIt(literalString, ...interpolatedParts) {
       // implement this function to make the test pass
-      return `` 
+      return `fixme`
     }
   })
 

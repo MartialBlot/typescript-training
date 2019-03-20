@@ -50,7 +50,7 @@ there!`).toBe('Hi\nthere!')
 
     function tagIt(literalString, ...interpolatedParts) {
       // implement this function to make the test pass
-      return `` 
+      return `${this.Hello}`
     }
   })
 

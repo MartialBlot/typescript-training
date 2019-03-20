@@ -32,7 +32,7 @@ describe('Template literals', () => {
   it('should support string escaping', () => {
     // escape a string in a template literal for each of these
     expect(`Hi
-there!`).toBe('Hi\nthere!')
+    there`).toBe('Hi\nthere!')
     expect('This is `escaped` backtics').toBe('This is `escaped` backtics')
   })
 
@@ -50,7 +50,7 @@ there!`).toBe('Hi\nthere!')
 
     function tagIt(literalString, ...interpolatedParts) {
       // implement this function to make the test pass
-      return `` 
+      return `fixme`
     }
   })
 
