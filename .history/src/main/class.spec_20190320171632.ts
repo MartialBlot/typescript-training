@@ -41,7 +41,6 @@ describe('class', () => {
     class Musician{
       instrument : string;
       constructor(instrument : string){
-        this.instrument = instrument;
       }
       play  = function () {
         return `I'm playing ${this.instrument}`
@@ -50,7 +49,7 @@ describe('class', () => {
     // Create a Musician class, pass in the instrument to the constructor,
     // and add a play function to the class definition
 
-    const musician = new Musician('drums')
+    const musician = new Musician('drum')
 
     expect(musician.play).toBeDefined()
     // expect(Musician.play).toBeUndefined()
@@ -60,14 +59,13 @@ describe('class', () => {
   it('can have static methods and properties', () => {
     class Musician{
       instrument : string;
-      static instances : Musician[] = [];
       constructor(instrument : string){
-        this.instrument = instrument;
       }
-      static create(instrument : string){ Musician {
-        const musician = new Musician (instrument);
-        Musician.instances.push(musician);
-        return musician}
+      static instances(){
+        return 
+      }
+      static get create(){
+        return 
       }
     }
     // Create a Musician class, pass in the instrument to the constructor,
@@ -78,11 +76,11 @@ describe('class', () => {
     expect(Musician.create).toBeDefined()
     expect(Musician.instances.length).toBe(0)
 
-    const john = Musician.create('piano')
+    const john = Musician.create()
     // expect(john.create).toBeUndefined()
     expect(Musician.instances.length).toBe(1)
 
-    const ringo = Musician.create('drums')
+    const ringo = Musician.create()
     // expect(ringo.create).toBeUndefined()
     expect(Musician.instances.length).toBe(2)
   })

@@ -78,11 +78,11 @@ describe('class', () => {
     expect(Musician.create).toBeDefined()
     expect(Musician.instances.length).toBe(0)
 
-    const john = Musician.create('piano')
+    const john = Musician.create()
     // expect(john.create).toBeUndefined()
     expect(Musician.instances.length).toBe(1)
 
-    const ringo = Musician.create('drums')
+    const ringo = Musician.create()
     // expect(ringo.create).toBeUndefined()
     expect(Musician.instances.length).toBe(2)
   })
