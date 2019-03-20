@@ -60,12 +60,7 @@ describe('class', () => {
     class Musician{
       instrument : string;
       constructor(instrument : string){
-      }
-      static instances(){
-        return 
-      }
-      static get create(){
-        return 
+
       }
     }
     // Create a Musician class, pass in the instrument to the constructor,
@@ -80,7 +75,7 @@ describe('class', () => {
     // expect(john.create).toBeUndefined()
     expect(Musician.instances.length).toBe(1)
 
-    const ringo = Musician.create()
+    const ringo = Musician.create('drums')
     // expect(ringo.create).toBeUndefined()
     expect(Musician.instances.length).toBe(2)
   })
@@ -124,32 +119,15 @@ describe('class', () => {
     expect(guitarist.description).toBe('this musician plays guitar')
     expect(drummer.description).toBe('this musician plays drums')
   })
-  
-  let phrase:string = "this musician played in";
+
   it('can use property setters and getters', () => {
-    class Musician{
-      band : string;
-      constructor(band:string){
-        this.band=band;
-      }
-      get allBands (){
-        if (!phrase.includes("ABBA")){
-        phrase = `${phrase} ${this.band}`;
-        return phrase;
-      }
-      else{
-        phrase = `${phrase}, ${this.band}`;
-        return phrase;
-      }
-      }
-    }
     // Create a Musician class
     // Add property getter for allBands
     // - it will return a string describing all the bands that this musician played in
     // Add property setter for band
     // - it will add this band to the list of musician's bands'. How to store them?
 
-    const musician = new Musician("ABBA")
+    const musician = new Musician()
 
     musician.band = 'ABBA'
     expect(musician.allBands).toBe('this musician played in ABBA')

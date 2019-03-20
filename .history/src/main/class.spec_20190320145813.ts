@@ -60,12 +60,7 @@ describe('class', () => {
     class Musician{
       instrument : string;
       constructor(instrument : string){
-      }
-      static instances(){
-        return 
-      }
-      static get create(){
-        return 
+
       }
     }
     // Create a Musician class, pass in the instrument to the constructor,
@@ -80,7 +75,7 @@ describe('class', () => {
     // expect(john.create).toBeUndefined()
     expect(Musician.instances.length).toBe(1)
 
-    const ringo = Musician.create()
+    const ringo = Musician.create('drums')
     // expect(ringo.create).toBeUndefined()
     expect(Musician.instances.length).toBe(2)
   })
