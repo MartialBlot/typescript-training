@@ -14,8 +14,7 @@ describe('const declarations', () => {
     // modify `var` below to a `const`
     // implement a function to make the tests pass
 
-    const myFn = function(){
-      return "training";}
+    var myFn;
 
     expect(myFn()).toEqual('training')
   })

@@ -22,7 +22,7 @@ describe('let declarations', () => {
   it('is trapped inside of an `if` statement', () => {
     if (true) {
       // Change to `var` to `let`, so that b is scoped inside of the if-statement
-      let b = 1;
+      var b = 1
     }
     expect(() => noop(b)).toThrow()
   })
@@ -30,7 +30,7 @@ describe('let declarations', () => {
   it('cannot redeclare using the same name', () => {
     function doLoop() {
       // Change loop counter to `let` so that it is trapped inside of the loop, and can't be returned.
-      for (let i = 0; i < 10; i++) {
+      for (var i = 0; i < 10; i++) {
         // empty loop content
       }
       return i
@@ -43,7 +43,7 @@ describe('let declarations', () => {
     // BLOCK STATEMENT
     {
       // Change to `let` declaration
-      let d = 2
+      var d = 2
     }
 
     expect(() => noop('d', d)).toThrow()
@@ -53,13 +53,13 @@ describe('let declarations', () => {
     // replace dots (...) below with appropriate `let` statements to make expectations pass
 
     // NESTED BLOCK STATEMENTS
-    let message = "John";
+    // let...
     expect(message).toBe('John')
     {
-      let message = "Lennon";
+      // let...
       expect(message).toBe('Lennon')
       {
-        let message = "died";
+        // let...
         expect(message).toBe('died')
       }
       expect(message).toBe('Lennon')

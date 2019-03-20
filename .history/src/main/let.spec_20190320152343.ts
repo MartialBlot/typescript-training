@@ -43,7 +43,7 @@ describe('let declarations', () => {
     // BLOCK STATEMENT
     {
       // Change to `let` declaration
-      let d = 2
+      var d = 2
     }
 
     expect(() => noop('d', d)).toThrow()
@@ -53,13 +53,13 @@ describe('let declarations', () => {
     // replace dots (...) below with appropriate `let` statements to make expectations pass
 
     // NESTED BLOCK STATEMENTS
-    let message = "John";
+    // let...
     expect(message).toBe('John')
     {
-      let message = "Lennon";
+      // let...
       expect(message).toBe('Lennon')
       {
-        let message = "died";
+        // let...
         expect(message).toBe('died')
       }
       expect(message).toBe('Lennon')

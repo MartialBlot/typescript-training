@@ -56,10 +56,10 @@ describe('let declarations', () => {
     let message = "John";
     expect(message).toBe('John')
     {
-      let message = "Lennon";
+      message = "Lennon";
       expect(message).toBe('Lennon')
       {
-        let message = "died";
+        message = "died";
         expect(message).toBe('died')
       }
       expect(message).toBe('Lennon')
