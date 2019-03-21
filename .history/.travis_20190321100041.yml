@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "9.8.0"
 sudo: required
-script: npm test
+script:npm test
 
 addons:
   chrome: stable
