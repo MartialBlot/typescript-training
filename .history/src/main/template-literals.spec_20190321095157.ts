@@ -52,7 +52,7 @@ there!`).toBe('Hi\nthere!')
       // implement this function to make the test pass
       let dear = `dear ${interpolatedParts[0]}`;
       let really = `really ${interpolatedParts[1]}`
-      return `${literalString[0]}${dear}${literalString[1]}${really}${literalString[2]}`; 
+      return `${literalString[0]} ${dear} ${literalString[1]} ${really} ${literalString[2]} `; 
     }
   })
 
